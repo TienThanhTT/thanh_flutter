@@ -8,7 +8,7 @@ class RegisterRepository {
     final response = await api.registerUser(email, username, password);
     if (response != null && response.statusCode == 201) {
       if (response.data['reqires_email_confirmation'] == true) {
-        result = 3;
+        result = 3; // Cần xác nhận email
       } else {
         result = 4;
       }

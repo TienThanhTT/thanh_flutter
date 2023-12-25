@@ -9,9 +9,9 @@ class LoginRepository {
     if (response != null && response.statusCode == 200) {
       profile.token = response.data['token'];
       profile.setUsernamePassword(username, password);
-    } else {
-      profile.token = "";
+    } else {profile.token = "";
     }
+
     return profile;
   }
 }

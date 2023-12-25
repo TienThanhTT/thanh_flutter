@@ -22,8 +22,7 @@ class LoginViewModel with ChangeNotifier {
       } else {
         // Dang nhap thanh cong, lay thong user student
         var student = await StudentRepository().getStudentInfo();
-        profile.student = Student.fromStudent(student);
-        var user = await UserRepository().getUserInfo();
+        profile.student = Student.fromStudent(student);        var user = await UserRepository().getUserInfo();
         profile.user = User.fromUser(user);
         status = 3;
       }
